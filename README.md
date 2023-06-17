@@ -1,4 +1,4 @@
-# Autonomous HR Chatbot
+# Autonomous HR Chatbot built using ChatGPT, LangChain and Pinecone
 
 ### Stephen Bonifacio
 
@@ -9,6 +9,3 @@ Linkedin: https://www.linkedin.com/in/stephenbonifacio/
 Twitter: https://twitter.com/Stepanogil
 
 Or drop me an email at: stephen.bonifacio@jgsummit.ph
-
-
-
