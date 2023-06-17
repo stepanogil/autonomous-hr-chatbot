@@ -1,4 +1,6 @@
 ## Autonomous HR Chatbot
-by Stephen Bonifacio
 
+Stephen Bonifacio
+Linkedin: https://www.linkedin.com/in/stephenbonifacio/
+Email: stephen.bonifacio@jgsummit.ph
 
