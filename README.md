@@ -1,6 +1,6 @@
-## Autonomous HR Chatbot
+# Autonomous HR Chatbot
 
-Stephen Bonifacio
+### Stephen Bonifacio
 
 
 Linkedin: https://www.linkedin.com/in/stephenbonifacio/
