@@ -2,7 +2,10 @@
 
 Stephen Bonifacio
 
+
 Linkedin: https://www.linkedin.com/in/stephenbonifacio/
 
 Email: stephen.bonifacio@jgsummit.ph
+
+Twitter: https://twitter.com/Stepanogil
 
