@@ -1,4 +1,4 @@
-# Autonomous HR Chatbot built using ChatGPT, LangChain and Pinecone
+# Autonomous HR Chatbot built using ChatGPT, LangChain and Pinecone and Streamlit as frontend.
 
 
 
