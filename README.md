@@ -9,16 +9,16 @@ Companion Reading: [Creating a (mostly) Autonomous HR Assistant with ChatGPT and
 
 ### Instructions:
 
-#### How to use this repo
+#### How to use this repo:
 
 1. Clone the repo to a local directory  
 2. Input your own API keys in the hr_agent_backend.py file  
 3. Navigate to the local directory via terminal  
 4. Run 'streamlit run hr_agent_frontent.py' in your terminal
 
-#### Storing Embeddings in Pinecone
+#### Storing Embeddings in Pinecone:
 
-1. Create a Pinecone account in [pinecone.io](pinecone.io) - there is a free tier.  Take down the Pinecone API and environment values.
+1. Create a Pinecone account in [pinecone.io](pinecone.io) - there is a free tier.  Take note of the Pinecone API and environment values.
 2. Run the notebook 'store_embeddings_in_pinecone.ipynb'. Replace the Pinecone and OpenAI API keys (for  the embedding model) with your own.
 
 
