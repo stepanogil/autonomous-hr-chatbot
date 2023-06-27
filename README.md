@@ -6,7 +6,6 @@
 Companion Reading: [Creating a (mostly) Autonomous HR Assistant with ChatGPT and LangChain’s Agents and Tools](https://medium.com/@stephen.bonifacio/creating-a-mostly-autonomous-hr-assistant-with-chatgpt-and-langchains-agents-and-tools-1cdda0aa70ef)
 
 <br>
-<br>
 
 ### Instructions:
 
@@ -17,16 +16,16 @@ Companion Reading: [Creating a (mostly) Autonomous HR Assistant with ChatGPT and
 
 #### Running with a csv file saved locally (does not require Azure Data Lake)
 
-![nodl](nodl.png)
+![nodl](img/nodl.png)
 
 #### Running with API keys from from platform.openai.com (and not Azure)
 Replace the code blocks below in hr_agent_backend.py with the following openai counterparts.
 
-![openaiapi](openaiapi.png)
+![openaiapi](img/openaiapi.png)
 
 ### Author:
 
-#### Stephen Bonifacio
+### Stephen Bonifacio
 
 Feel free to connect with me on:
 
