@@ -1,7 +1,7 @@
 import streamlit as st
 import random
 from streamlit_chat import message
-from your_backend_py import get_response
+from hr_agent_backend import get_response
 
 def process_input(user_input):
     response = get_response(user_input)

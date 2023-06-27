@@ -8,12 +8,28 @@ Companion Reading: [Creating a (mostly) Autonomous HR Assistant with ChatGPT and
 <br>
 <br>
 
-### Stephen Bonifacio
+### Instructions:
+
+1. Clone the Github repo to a local directory  
+2. Input your own API keys in the hr_agent_backend.py file  
+3. Navigate to the local directory via terminal  
+4. Run 'streamlit run hr_agent_frontent.py' in your terminal
+
+#### Running with a csv file saved locally (does not require Azure Data Lake)
+
+![nodl](nodl.png)
+
+#### Running with API keys from from platform.openai.com (and not Azure)
+Replace the code blocks below in hr_agent_backend.py with the following openai counterparts.
+
+![openaiapi](openaiapi.png)
+
+### Author:
+
+#### Stephen Bonifacio
 
 Feel free to connect with me on:
 
-Linkedin: https://www.linkedin.com/in/stephenbonifacio/
-
-Twitter: https://twitter.com/Stepanogil
-
+Linkedin: https://www.linkedin.com/in/stephenbonifacio/  
+Twitter: https://twitter.com/Stepanogil  
 Or drop me an email at: stephen.bonifacio@jgsummit.ph
