@@ -50,3 +50,10 @@ Feel free to connect with me on:
 Linkedin: https://www.linkedin.com/in/stephenbonifacio/  
 Twitter: https://twitter.com/Stepanogil  
 Or drop me an email at: stephen.bonifacio@jgsummit.ph
+
+### Video Demo: 
+
+<video width="640" height="360" controls>
+  <source src="img/movie.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
