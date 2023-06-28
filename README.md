@@ -53,7 +53,4 @@ Or drop me an email at: stephen.bonifacio@jgsummit.ph
 
 ### Video Demo: 
 
-<video width="640" height="360" controls>
-  <source src="img/movie.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://www.youtube.com/watch?v=id7XRcEIBvg&ab_channel=StephenBonifacio
