@@ -53,4 +53,4 @@ Or drop me an email at: stephen.bonifacio@jgsummit.ph
 
 ### Video Demo: 
 
-https://www.youtube.com/watch?v=id7XRcEIBvg&ab_channel=StephenBonifacio
+[Youtube Link](https://www.youtube.com/watch?v=id7XRcEIBvg&ab_channel=StephenBonifacio)
