@@ -41,6 +41,10 @@ Replace the code blocks below in hr_agent_backend.py with the following openai c
 [Azure Data Factory](https://azure.microsoft.com/en-ca/products/data-factory/) - used to create the data pipeline.  
 [SAP HCM](https://www.sap.com/sea/products/hcm/what-is-sap-hr.html) - the source system for employee data.   
 
+### Video Demo: 
+
+[Youtube Link](https://www.youtube.com/watch?v=id7XRcEIBvg&ab_channel=StephenBonifacio)
+
 ### Author:
 
 ### Stephen Bonifacio
@@ -51,6 +55,4 @@ Linkedin: https://www.linkedin.com/in/stephenbonifacio/
 Twitter: https://twitter.com/Stepanogil  
 Or drop me an email at: stephen.bonifacio@jgsummit.ph
 
-### Video Demo: 
 
-[Youtube Link](https://www.youtube.com/watch?v=id7XRcEIBvg&ab_channel=StephenBonifacio)
