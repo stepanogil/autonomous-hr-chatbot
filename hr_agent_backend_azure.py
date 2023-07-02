@@ -38,7 +38,7 @@ vectorstore = Pinecone(
     index, embed.embed_query, text_field
 )
 
-# initialize LLM object
+initialize LLM object
 llm = AzureChatOpenAI(    
     deployment_name="<your deployment name>", 
     model_name="gpt-35-turbo", 
@@ -68,6 +68,10 @@ file = client.get_file_system_client("<your azure storage account name>") \
              .decode('utf-8') 
 
 csv_file = StringIO(file) 
+df = pd.read_csv(csv_file) # load employee_data.csv as dataframe
+python = PythonAstREPLTool(locals={"df": df}) # set access of python_repl tool to the dataframe
+
+csv_file = StringIO(file)
 df = pd.read_csv(csv_file) # load employee_data.csv as dataframe
 python = PythonAstREPLTool(locals={"df": df}) # set access of python_repl tool to the dataframe
 
