@@ -38,7 +38,7 @@ vectorstore = Pinecone(
     index, embed.embed_query, text_field
 )
 
-initialize LLM object
+#initialize LLM object
 llm = AzureChatOpenAI(    
     deployment_name="<your deployment name>", 
     model_name="gpt-35-turbo", 
