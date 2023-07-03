@@ -14,13 +14,13 @@ It was made using LangChain's agents and tools modules and using Pinecone as vec
 Tools currently assigned:
 1. Timekeeping Policies - A ChatGPT generated sample HR policy document. Embeddings were created for this doc using OpenAI’s *text-embedding-ada-002* model and stored in a Pinecone index.
 2. Employee Data - A csv file containing dummy employee data (e.g. name, supervisor, # of leaves etc). It's loaded as a pandas dataframe and manipulated by the LLM using LangChain's PythonAstREPLTool
-3. Calculator - this is LangChain's calculator chain module - LLMMathChain
+3. Calculator - this is LangChain's calculator chain module, LLMMathChain
 
-Sample Chat
+#### Sample Chat
 
 ![sample_chat](assets/sample_chat.png)
 
-Sample Tool Use
+#### Sample Tool Use
 
 ![sample_tool_use](assets/sample_tool_use.png)
 
