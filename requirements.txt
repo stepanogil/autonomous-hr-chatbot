@@ -87,6 +87,7 @@ streamlit-chat==0.1.1
 tenacity==8.2.2
 toml==0.10.2
 toolz==0.12.0
+tiktoken==0.4.0
 tornado==6.3.2
 tqdm==4.65.0
 traitlets==5.9.0
