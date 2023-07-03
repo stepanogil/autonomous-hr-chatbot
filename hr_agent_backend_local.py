@@ -16,7 +16,7 @@ from langchain import LLMMathChain
 # initialize pinecone client and connect to pinecone index
 pinecone.init(
         api_key="<your pinecone api key>",  
-        environment="your pinecone environment"  
+        environment="<your pinecone environment>"  
 ) 
 
 index_name = 'tk-policy'
@@ -36,7 +36,7 @@ vectorstore = Pinecone(
 
 llm = ChatOpenAI(    
     openai_api_key="<your openai api key from from platform.openai.com>", 
-    model_name="gpt-35-turbo", 
+    model_name="gpt-3.5-turbo", 
     temperature=0.0
     )
 
