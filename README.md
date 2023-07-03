@@ -9,7 +9,7 @@ Companion Reading: [Creating a (mostly) Autonomous HR Assistant with ChatGPT and
 ### TL;DR, Description
 ---
 This is a prototype enterprise application - an autonomous agent that is able to answer HR queries using the tools it has on hand.
-It was made using LangChain's agents and tools modules and using Pinecone as vector database. The front-end is Streamlit using the streamlit_chat component.
+It was made using LangChain's agents and tools modules and using Pinecone as vector database and powered by ChatGPT or gpt-3.5-turbo. The front-end is Streamlit using the streamlit_chat component.
 
 Tools currently assigned:
 1. Timekeeping Policies - A ChatGPT generated sample HR policy document. Embeddings were created for this doc using OpenAI’s *text-embedding-ada-002* model and stored in a Pinecone index.
