@@ -6,7 +6,7 @@
 Companion Reading: [Creating a (mostly) Autonomous HR Assistant with ChatGPT and LangChain’s Agents and Tools](https://medium.com/@stephen.bonifacio/creating-a-mostly-autonomous-hr-assistant-with-chatgpt-and-langchains-agents-and-tools-1cdda0aa70ef)
 
 ---
-### TL;DR, Description
+### TL;DR/Description
 ---
 This is a prototype enterprise application - an autonomous agent that is able to answer HR queries using the tools it has on hand.
 It was made using LangChain's agents and tools modules and using Pinecone as vector database and powered by ChatGPT or gpt-3.5-turbo. The front-end is Streamlit using the streamlit_chat component.
