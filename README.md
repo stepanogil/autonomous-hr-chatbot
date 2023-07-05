@@ -36,9 +36,9 @@ This is does not use any Azure components - the API is from platform.openai.com,
 
 1. Install python 3.10. [Windows](https://www.tomshardware.com/how-to/install-python-on-windows-10-and-11#:~:text=1.,and%20download%20the%20Windows%20installer.&text=2.,is%20added%20to%20your%20path.), [Mac](https://www.codingforentrepreneurs.com/guides/install-python-on-macos/) 
 2. Clone the repo to a local directory.
-3. Navigate to the local directory and run this command in your terminal to install all prerequisite modules - 'pip install -r requirements.txt'
+3. Navigate to the local directory and run this command in your terminal to install all prerequisite modules - `pip install -r requirements.txt`
 4. Input your own API keys in the hr_agent_backend_local.py file (or hr_agent_backend_azure.py if you want to use the azure version; just uncomment it in the frontend.py file)
-5. Run 'streamlit run hr_agent_frontent.py' in your terminal
+5. Run `streamlit run hr_agent_frontent.py` in your terminal
 
 #### Storing Embeddings in Pinecone
 
