@@ -63,6 +63,14 @@ This is does not use any Azure components - the API is from platform.openai.com,
 
 [Youtube Link](https://www.youtube.com/watch?v=id7XRcEIBvg&ab_channel=StephenBonifacio)
 
+---
+### Roadmap
+---
+Currently working on adding the following tools using OpenAI's function call:
+
+1. Currency Exchange Rate tool - this tool will have access to the internet to check the current FX rate. Sample HR Use Case: a contractor paid in USD can ask how much he will be paid in his/her local currency - e.g. 'How much is my salary this month in PHP?  
+2. Tax Explainer - the employee can ask how his/her tax (and other deductions) are computed for the payroll period based on tax rates and statutory deduction tables e.g. taxable gross, social security deductions etc. The chatbot will illustrate how the tax/deduction was computed based on the user's own payroll data/values.
+
 
 ---
 ### Author
