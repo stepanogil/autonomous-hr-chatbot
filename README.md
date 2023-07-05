@@ -73,6 +73,7 @@ Currently working on adding the following tools using OpenAI's function call:
 
 
 Other suggestions welcome. ☺️ 
+Just open a new topic in the `discussions` section.
 
 
 ---
