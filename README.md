@@ -72,7 +72,7 @@ Currently working on adding the following tools using OpenAI's function call:
 2. Tax Explainer - the employee can ask how his/her tax (and other deductions) are computed for the payroll period based on tax rates and statutory deduction tables e.g. taxable gross, social security deductions etc. The chatbot will illustrate how the tax/deduction was computed based on the user's own payroll data/values.
 
 
-Other suggestions welcome. ☺️ 
+Other suggestions welcome. ☺️  
 Just open a new topic in the `discussions` section.
 
 
