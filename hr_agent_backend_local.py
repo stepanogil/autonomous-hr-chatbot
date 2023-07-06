@@ -64,6 +64,12 @@ tools = [
         func=timekeeping_policy.run,
         description="""
         Useful for when you need to answer questions about employee timekeeping policies.
+
+        <user>: What is the policy on unused vacation leave?
+        <assistant>: I need to check the timekeeping policies to answer this question.
+        <assistant>: Action: Timekeeping Policies
+        <assistant>: Action Input: Vacation Leave Policy - Unused Leave
+        ...
         """
     ),
     Tool(
