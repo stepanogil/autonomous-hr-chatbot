@@ -11,7 +11,7 @@ Companion Reading: [Creating a (mostly) Autonomous HR Assistant with ChatGPT and
 This is a prototype enterprise application - an autonomous agent that is able to answer HR queries using the tools it has on hand.
 It was made using LangChain's agents and tools modules, using Pinecone as vector database and powered by ChatGPT or gpt-3.5-turbo. The front-end is Streamlit using the streamlit_chat component.
 
-Tools currently assigned (with more on the way):
+Tools:
 1. Timekeeping Policies - A ChatGPT generated sample HR policy document. Embeddings were created for this doc using OpenAI’s *text-embedding-ada-002* model and stored in a Pinecone index.
 2. Employee Data - A csv file containing dummy employee data (e.g. name, supervisor, # of leaves etc). It's loaded as a pandas dataframe and manipulated by the LLM using LangChain's PythonAstREPLTool
 3. Calculator - this is LangChain's calculator chain module, LLMMathChain
@@ -25,12 +25,6 @@ Tools currently assigned (with more on the way):
 ![sample_tool_use](assets/sample_tool_use.png)
 
 ---
-### Instructions
----
-
-I made this prototype using Azure deployments as my company is an Azure customer.  
-I created a backend file called `hr_agent_backend_local.py` for those that does not want to use Azure.  
-This is does not use any Azure components - the API is from platform.openai.com, the csv file is stored locally(i.e. on your own computer)
 
 #### How to use this repo
 
@@ -62,19 +56,6 @@ This is does not use any Azure components - the API is from platform.openai.com,
 ---
 
 [Youtube Link](https://www.youtube.com/watch?v=id7XRcEIBvg&ab_channel=StephenBonifacio)
-
----
-### Roadmap
----
-Currently working on adding the following tools using OpenAI's function calling feature:
-
-1. Currency Exchange Rate tool - this tool will have access to the internet to check the current FX rate. Sample HR Use Case: a contractor paid in USD can ask how much he will be paid in his/her local currency - e.g. 'How much is my salary this month in PHP?  
-2. Tax Explainer - the employee can ask how his/her tax (and other deductions) are computed for the payroll period based on tax rates and statutory deduction tables e.g. taxable gross, social security deductions etc. The chatbot will illustrate how the tax/deduction was computed based on the user's own payroll data/values. Idea stolen (with permission) from Jem Rodil :)
-
-
-Other suggestions welcome. ☺️  
-Just open a new topic in the `discussions` section.
-
 
 ---
 ### Author
