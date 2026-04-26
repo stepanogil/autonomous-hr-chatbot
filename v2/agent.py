@@ -31,6 +31,43 @@ def run_turn(
     vector_store_id: str,
     system_prompt: str,
 ) -> Generator[tuple, None, None]:
+    """Drive one user turn through the Responses API agent loop, yielding events as they arrive.
+
+    Streams a response from the model, dispatches any function calls to local
+    tool implementations, and feeds results back via ``previous_response_id``
+    until the model emits a final text answer with no further tool calls.
+
+    The ``file_search`` built-in tool is handled server-side; its results are
+    included via ``include=["file_search_call.results"]`` and surfaced as
+    ``file_search_done`` events — no local dispatch is required.
+
+    Args:
+        client: An ``openai.OpenAI`` or ``openai.AzureOpenAI`` instance.
+        model: Model name or Azure deployment name (e.g. ``"gpt-5.2"``).
+        user_input: The raw message text from the user for this turn.
+        previous_response_id: The ``response.id`` from the prior turn, used by
+            the Responses API to carry conversation context server-side.
+            Pass ``None`` on the first turn of a new conversation.
+        vector_store_id: ID of the OpenAI vector store containing the HR policy
+            document, wired to the built-in ``file_search`` tool.
+        system_prompt: The ``instructions`` string sent on every API call,
+            establishing the assistant persona and current user context.
+
+    Yields:
+        Tagged tuples consumed by the Streamlit frontend:
+
+        - ``("reasoning_delta", str)`` — incremental reasoning summary text.
+        - ``("tool_call_started", call_id, name)`` — function call has begun.
+        - ``("tool_call_finished", call_id, name, result_json)`` — local tool
+          executed; ``result_json`` is the JSON-encoded return value.
+        - ``("file_search_started",)`` — server-side file search has begun.
+        - ``("file_search_done", queries, results)`` — search complete;
+          ``queries`` is a ``list[str]`` of search terms used, ``results`` is
+          a ``list[{"text": str, "score": float|None}]`` of retrieved chunks.
+        - ``("text_delta", str)`` — incremental assistant answer text.
+        - ``("done", response_id)`` — final response ID for the next turn.
+        - ``("error", message)`` — unrecoverable API or dispatch error.
+    """
     tools = TOOL_SCHEMAS + [
         {"type": "file_search", "vector_store_ids": [vector_store_id]}
     ]

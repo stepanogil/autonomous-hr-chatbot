@@ -1,3 +1,35 @@
+"""
+Streamlit frontend for the HR Chatbot v2.
+
+Renders a chat interface that streams model reasoning, tool calls, file search
+results, and the final assistant answer in real time. Backend (local OpenAI or
+Azure OpenAI) is selected via the ``BACKEND`` environment variable.
+
+Session state keys
+------------------
+history : list[dict]
+    UI-only message log — ``[{"role": "user"|"assistant", "content": str}]``.
+    Used solely to re-render past messages on Streamlit reruns; the actual
+    conversation context lives server-side via ``previous_response_id``.
+previous_response_id : str | None
+    The ``response.id`` returned by the last Responses API call, threaded into
+    the next ``run_turn`` call so the model retains full conversation context
+    without replaying the message history.
+client : openai.OpenAI | openai.AzureOpenAI
+    Shared API client, created once and stored to avoid re-initialising on
+    every Streamlit rerun.
+config : dict
+    Backend configuration dict from ``get_config()`` — contains ``model``,
+    ``vector_store_id``, and ``system_prompt``.
+
+Environment variables (via .env)
+---------------------------------
+BACKEND : str
+    ``"local"`` (default) or ``"azure"``.
+HR_USER_NAME : str
+    Display name of the current user shown in the caption bar.
+"""
+
 import json
 import os
 
