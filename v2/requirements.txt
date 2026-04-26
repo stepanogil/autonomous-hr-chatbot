@@ -1,0 +1,4 @@
+openai
+streamlit>=1.40
+python-dotenv>=1.0
+pandas>=2.2
