@@ -7,7 +7,7 @@ dispatch table (``TOOL_DISPATCH``) consumed by ``agent.py``.
 
 The employee DataFrame is loaded once at module import time from the CSV path
 resolved via the ``EMPLOYEE_CSV_PATH`` environment variable (defaults to
-``../employee_data.csv`` relative to this file). Streamlit caches imported
+``employee_data.csv`` in the same directory as this file). Streamlit caches imported
 modules per worker process, so the CSV is not re-read on every user message.
 
 Tools
@@ -26,7 +26,7 @@ import os
 import pandas as pd
 from pathlib import Path
 
-_csv_path = os.getenv("EMPLOYEE_CSV_PATH", str(Path(__file__).parent.parent / "employee_data.csv"))
+_csv_path = os.getenv("EMPLOYEE_CSV_PATH", str(Path(__file__).parent / "employee_data.csv"))
 _df = pd.read_csv(_csv_path)
 
 

@@ -24,7 +24,7 @@ if backend == "azure":
 else:
     from backend_local import make_client
 
-policy_path = Path(__file__).parent.parent / "hr_policy.txt"
+policy_path = Path(__file__).parent / "hr_policy.txt"
 if not policy_path.exists():
     print(f"ERROR: {policy_path} not found.", file=sys.stderr)
     sys.exit(1)

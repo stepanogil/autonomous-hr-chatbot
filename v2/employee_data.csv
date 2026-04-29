@@ -1,0 +1,7 @@
+employee_id,name,position,organizational_unit,rank,hire_date,regularization_date,vacation_leave,sick_leave,basic_pay_in_php,employment_status,supervisor
+1005674,Joseph Peña,Accounts Recievable Supervisor,Finance Department,Supervisor,2/16/2013,7/16/2013,30,15,20000,Permanent,Richard Santos
+1005675,Mark Delos Santos,HR Assistant,HR Department,Rank and File,1/1/2023,,20,2,15000,Probation,Jinky Francisco
+1005676,Alexander Verdad,Account Recievable Assistant,Finance Department,Rank and File,11/1/2017,5/1/2018,45,8,15000,Permanent,Joseph Santos
+1005677,Jinky Francisco,Recruitment Supervisor,HR Department,Supervisor,10/15/2021,4/15/2022,16,4,15000,Permanent,
+1005678,Richard Santos,Accounts Recievable Head,Finance Department,Manager,3/16/2016,9/16/2016,50,11,30000,Permanent,
+

@@ -1,6 +1,6 @@
 # HR Chatbot — v2 (OpenAI Responses API)
 
-A modernized rewrite of the [original HR chatbot](../README.md) using the **OpenAI Responses API** directly — no LangChain, no Pinecone. Surfaces real model reasoning via `gpt-5.2`'s reasoning summaries and demonstrates the Responses API's native function calling and `file_search` built-in tool.
+A modernized rewrite of the [original HR chatbot](../README.md) using an agent loop via **OpenAI Responses API** directly — no LangChain, no Pinecone. Surfaces real model reasoning via `gpt-5.2`'s reasoning summaries and demonstrates the Responses API's native function calling and `file_search` built-in tool.
 
 #### Sample Chat
 
@@ -27,24 +27,42 @@ A modernized rewrite of the [original HR chatbot](../README.md) using the **Open
 
 ## Setup
 
-### 1. Install dependencies
+### 1. Create and activate a virtual environment
 
 ```bash
 cd v2
+python -m venv .venv
+```
+
+**Activate:**
+
+- macOS / Linux: `source .venv/bin/activate`
+- Windows (CMD): `.venv\Scripts\activate.bat`
+- Windows (PowerShell): `.venv\Scripts\Activate.ps1`
+
+### 2. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 2. Configure environment
+---
+
+> **Pick the path that matches where your LLM is hosted — Path A for OpenAI, Path B for Azure OpenAI.**
+
+---
+
+### Path A — OpenAI
+
+#### A1. Configure environment
 
 ```bash
 cp .env.example .env
 ```
 
-Fill in `OPENAI_API_KEY` (or Azure vars if using the Azure backend). Leave `OPENAI_VECTOR_STORE_ID` blank for now.
+Fill in `OPENAI_API_KEY`. Leave `OPENAI_VECTOR_STORE_ID` blank for now.
 
-### 3. Ingest the HR policy (one-time)
-
-This uploads `hr_policy.txt` into an OpenAI vector store used by the `file_search` tool:
+#### A2. Ingest the HR policy (one-time)
 
 ```bash
 python ingest_policy.py
@@ -52,28 +70,48 @@ python ingest_policy.py
 
 Copy the printed `vs_…` ID into your `.env` as `OPENAI_VECTOR_STORE_ID`.
 
-### 4. Run
+#### A3. Run
 
 ```bash
 streamlit run app.py
 ```
 
-## Azure OpenAI
+---
 
-Set `BACKEND=azure` in `.env` and fill in the `AZURE_OPENAI_*` variables.
+### Path B — Azure OpenAI
 
-Requirements for the Azure deployment:
+Requirements:
 - A `gpt-5.n` deployment (or any reasoning model that supports the Responses API)
-- A vector store created via your Azure OpenAI resource (run `python ingest_policy.py` with `BACKEND=azure` set)
 
-> **Note:** Azure Data Lake CSV loading (from the original `hr_agent_backend_azure.py`) is not included here. Place `employee_data.csv` locally and point `EMPLOYEE_CSV_PATH` to it, or extend `tools.py` to load from Azure Data Lake using `azure-storage-file-datalake`.
+#### B1. Configure environment
+
+```bash
+cp .env.example .env
+```
+
+Set `BACKEND=azure` and fill in all `AZURE_OPENAI_*` variables. Leave `AZURE_OPENAI_VECTOR_STORE_ID` blank for now.
+
+#### B2. Ingest the HR policy (one-time)
+
+```bash
+python ingest_policy.py
+```
+
+Copy the printed `vs_…` ID into your `.env` as `AZURE_OPENAI_VECTOR_STORE_ID`.
+
+
+#### B3. Run
+
+```bash
+streamlit run app.py
+```
 
 ## Files
 
 | File | Purpose |
 |---|---|
 | `app.py` | Streamlit UI — renders reasoning panel, tool traces, final answer |
-| `agent.py` | Responses API streaming loop — dispatches tool calls, yields events |
+| `agent_loop.py` | Responses API streaming loop — dispatches tool calls, yields events |
 | `tools.py` | Typed function tools + JSON schemas + dispatch table |
 | `backend_local.py` | OpenAI client + config |
 | `backend_azure.py` | AzureOpenAI client + config |
