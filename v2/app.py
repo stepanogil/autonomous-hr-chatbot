@@ -49,7 +49,7 @@ if backend == "azure":
 else:
     from backend_local import get_config, make_client
 
-from agent import run_turn  # noqa: E402
+from agent_loop import run_turn  # noqa: E402
 
 # ---------------------------------------------------------------------------
 # Session state init
