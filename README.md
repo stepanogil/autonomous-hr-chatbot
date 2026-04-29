@@ -1,4 +1,4 @@
-> ✨ **2026 update:** A modernized version using OpenAI's Responses API (no LangChain, no Pinecone, with `gpt-5` reasoning summaries) lives in [`v2/`](./v2). The original 2023 implementation below is preserved as a reference.
+> ✨ **2026 update:** A modernized version using an agent loop via OpenAI's Responses API (no LangChain, no Pinecone, with `gpt-5.2` reasoning summaries) lives in [`v2/`](./v2). The original 2023 implementation below is preserved as a reference.
 
 # Autonomous HR Chatbot built using ChatGPT, LangChain, Pinecone and Streamlit
 
